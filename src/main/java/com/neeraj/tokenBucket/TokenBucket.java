@@ -22,7 +22,6 @@ public class TokenBucket {
 
     // Using a lock for the critical section of consuming tokens to ensure atomicity
     // of the read-modify-write operation involving both tokens and timestamp.
-    // Alternatives like CAS loops could be used but might be more complex to get right.
     private final ReentrantLock lock = new ReentrantLock();
 
 
